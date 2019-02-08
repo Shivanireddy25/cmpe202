@@ -7,24 +7,37 @@ public class NoQuarterState implements State {
         this.gumballMachine = gumballMachine;
     }
  
-	public void insertQuarter() {
-		System.out.println("You inserted a quarter");
-		gumballMachine.setState(gumballMachine.getHasQuarterState());
-	}
+   
+    public void insertCoin(int coin) {
+        
+        System.out.println("You inserted " + coin + "cents");
+        gumballMachine.setAmountPresent(coin);
+        if(!(gumballMachine.getCost() > gumballMachine.getAmountPresent())) {
+        gumballMachine.setState(gumballMachine.getHasQuarterState());
+        gumballMachine.nullifyAmount();
+            if(gumballMachine.getCost() < gumballMachine.getAmountPresent()) {
+                System.out.println("You get change" + (gumballMachine.getAmountPresent() - gumballMachine.getCost()));
+        } } else {
+        
+            gumballMachine.setState(gumballMachine.getNoQuarterState());
+          }
+}
  
-	public void ejectQuarter() {
-		System.out.println("You haven't inserted a quarter");
-	}
+    public void ejectCoin() {
+        System.out.println("You haven't inserted a coin yet!");
+    }
  
-	public void turnCrank() {
-		System.out.println("You turned, but there's no quarter");
-	 }
+    public void turnCrank() {
+        System.out.println("You turned,but there's not enough money" +
+        (gumballMachine.getCost() - gumballMachine.getAmountPresent()) +
+        "more needed");
+     }
  
-	public void dispense() {
-		System.out.println("You need to pay first");
-	} 
+    public void dispense() {
+        System.out.println("You need to pay first");
+    } 
  
-	public String toString() {
-		return "waiting for quarter";
-	}
+    public String toString() {
+        return "waiting for enough money";
+    }
 }
