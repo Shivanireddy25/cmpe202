@@ -1,0 +1,3 @@
+I have observed chain of responsibility pattern in this problem. As soon as the customer enters the restaurant he registers with Queue manager of the restaurant. Restaurant sends TableReady() flag to the QueueManager whenever there is a free table in the restaurant.
+
+The restaurant class doesn't refer to a particular customer class directly. Instead, it refers to QueueManager for assigning a Table (QueueManager.TableReady())), which makes the restaurant independent of which customer handles the request. Table class has methods isFree() and isOccupied() to determine the availability of the table. Since Restaurant is acting as a sender object and customers are receiving objects this can be assumed as Chain of responsibility pattern.
