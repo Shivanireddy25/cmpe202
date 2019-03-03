@@ -9,27 +9,41 @@ Customer registers with QueueManager with all the information and whenever there
 CRC for Customer:
 
 Customer
-Register with name , phone number and number of people.                     QueueHandler
+Responsibilities:
+Register with name , phone number and number of people.                   
 Confirm the table.
 Leave the restaurant.	
+Collaborators:
+QueueHandler
+
 
 CRC for QueueHandler:
 
 QueueHandler
-
-Send the request to receivers objects when table is ready.                	Receiver (Receiver1 and Receiver2)
-Store the registered customer data.                                         Customer        
+Responsibilties:
+Send the request to receivers objects when table is ready.                	
+Store the registered customer data.  
+Collaborators:
+Receiver (Receiver1 and Receiver2)
+Customer        
 
 
 CRC for Restaurant:
 
 Restaurant
-Inform Queue Manager with table availability	                             QueueHandler
+Responsibilties:
+Inform Queue Manager with table availability	  
+Collaborators:
+QueueHandler
 
 CRC for Receiver:
 
 Receiver
-Handle Table request by checking number of seats.                          QueueHandler
+Responsibilties:
+Handle Table request by checking number of seats.    
 Allot Table request.
+Collaborators:
+Restaurant
 
 
+Note : I have attached cards and images in the repo and CRC card diagrams are best shown in the README.md.docx with table format.
