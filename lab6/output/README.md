@@ -4,6 +4,8 @@ which implements the strategy interface created. Depending on the strategy chose
 I have chosen this pattern because the executing algorithm of display would be changing based on the strategy chosen. In my problem,
 sorting algorithm is invoked when packing slip is requested.
 
+Code for this solution is included in src folder under output.
+
 Sample Output of my design solution is shown below and screenshot is attached in output folder:
 
 This is Receipt
