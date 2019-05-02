@@ -2,9 +2,11 @@
 
 ### Comparision of Lab 1 and Lab 10
 
-In code for Gumball problem using patterns we have used the state pattern to solve the problem which we didn't see in the code using FeatureIDE and we can dynamically add any number of possible soutions to the FeatureIDE model.
+In Lab-1 code for Gumball problem using patterns we have used the state pattern to solve the problem which we didn't see in the code using FeatureIDE and we can dynamically add any number of valid possible configurations to the FeatureIDE model.
 
 In FeatureIDE code the required methods are weaved before and after depending on the execution of the code and any unnecessary methods are excluded from compilation depending on how it is configured.
+
+In Lab 10 model using FeatureIDE we can configure gumball machine with either crank or slot model with the valid cost of gumball and that particular flow of the machine would be executed.
 
 
 
